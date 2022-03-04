@@ -11,9 +11,10 @@ public class DataLocalManager {
     private MySharePreferences mySharePreferences;
 
     // ham khoi tao
-    public static void init(Context context) {
+    public static void init(Context context) throws Exception {
         instance = new DataLocalManager();
         instance.mySharePreferences = new MySharePreferences(context);
+        throw new Exception("Initialize error!");
     }
 
     public static DataLocalManager getInstance() {

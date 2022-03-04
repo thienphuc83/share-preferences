@@ -8,6 +8,10 @@ public class MyApplication extends Application {
         super.onCreate();
 
         // khởi tạo DataLocalMananger ở đây, để có thể dùng DataLocalMananger ở nhiều activity khác nhau.
-        DataLocalManager.init(getApplicationContext());
+        try {
+            DataLocalManager.init(getApplicationContext());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
